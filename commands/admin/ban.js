@@ -21,7 +21,7 @@ module.exports = class SayCommand extends Command {
 
     async run(msg, args) {
         if(args === "undefined" || args === "\n" || args === ""){
-            msg.reply('Must mention a user to ban.');
+            msg.channel.send('Must mention a user to ban.');
         }
 
         var id = args.toString();
